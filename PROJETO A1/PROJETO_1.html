@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" type="text/css" href="css/style1.css">-->
+    <title>Calculadora</title>
+
+    <style>
+        
+    body{
+        font: normal 14pt Arial;
+        padding-left: 12px;
+        background-color: rgb(196, 212, 255);
+    }
+    div#textos {
+        color: rgb(0, 0, 0);
+    }
+
+    div.inputs {
+        font-size: medium;
+    }
+    input#Nota1{
+        font: normal 12pt Arial;
+        width: 230px;
+        max-width: 100%;
+        border-width: 4px;
+        border-style: double;
+        border-color: rgb(0, 0, 0);
+
+    /* none: sem borda;
+        hidden: equivalente a none;
+        dotted: borda pontilhada;
+        dashed: borda tracejada;
+        solid: borda contínua;
+        double: borda dupla;
+        groove: borda entalhada;
+        ridge: borda em ressalto;
+        border-color: indica a cor utilizada na borda. 
+     */
+
+    }
+    input#Nota2{
+        font: normal 12pt Arial;
+        width: 233px;
+        max-width: 100%;
+        border-width: 4px;
+        border-style: double;
+        border-color: rgb(0, 0, 0);       }
+    input#Nota3{
+        font: normal 12pt Arial;
+        width: 227px;
+        max-width: 100%;
+        border-width: medium;
+        border-style: double;
+        border-color: rgb(0, 0, 0);
+    }
+    input#Nota4{
+        font: normal 12pt Arial;
+        width: 216px;
+        max-width: 100%;
+        border-width: 4px;
+        border-style: double;
+        border-color: rgb(0, 0, 0);
+    }
+    input#Nota5{
+        font: normal 12pt Arial;
+        width: 214px;
+        max-width: 100%;
+        border-width: 4px;
+        border-style: double;
+        border-color: rgb(0, 0, 0);
+    }
+    input#Nota6{
+        font: normal 12pt Arial;
+        width: 209px;
+        max-width: 100%;
+        border-width: 4px;
+        border-style: double;
+        border-color: rgb(0, 0, 0);
+    }
+    input {
+        width: 80px;
+        border-width: 2px;
+        border-style: double;
+        margin-left: 39ox;
+        
+    }
+    div#res{
+        margin-top: 14px;
+    }
+    div#Media {
+        margin-top:  15px;
+    }
+    div#MaiorNota {
+        margin-top:  15px;
+    }
+    div#MenorNota {
+        margin-top:  15px;
+    }
+    div#Situacao {
+        margin-top: 15px;
+        padding-bottom: 2px;
+    }
+
+    </style>
+</head>
+<body>
+    <h1>NOTAS</h1>
+<div class="inputs">
+
+    Digite a Nota do primeiro Aluno: <br><input type="number" name="Nota1" id="Nota1">  <br><br>
+    Digite a Nota do segundo Aluno:  <br><input type="number" name="Nota2" id="Nota2">  <br><br>
+    Digite a Nota do terceiro Aluno: <br><input type="number" name="Nota3" id="Nota3">  <br><br>
+    Digite a Nota do quarto Aluno:   <br><input type="number" name="Nota4" id="Nota4">   <br><br>
+    Digite a Nota do quinto Aluno:   <br><input type="number" name="Nota5" id="Nota5">   <br><br>
+    Digite a Nota do sexto Aluno:    <br><input type="number" name="Nota6" id="Nota6">    <br><br>
+
+    <input type="button" value="Calcular" onclick="NOTAS()">
+</div>
+
+<div id="textos">
+    <div id="res">       Resultado: </div>
+    <div id="Media">         Média: </div>
+    <div id="MaiorNota">Maior Nota: </div>
+    <div id="MenorNota">Menor Nota: </div>
+    <div id="Situacao">   Situação: </div>
+</div>
+
+<script>
+
+    function NOTAS () {
+        var PrimeiraNota = document.querySelector("input#Nota1")
+        var SegundaNota  = document.querySelector("input#Nota2")
+        var TerceiraNota = document.querySelector("input#Nota3")
+        var QuartaNota   = document.querySelector("input#Nota4")
+        var QuintaNota   = document.querySelector("input#Nota5")
+        var SextaNota    = document.querySelector("input#Nota6")
+        var res = window.document.querySelector("div#res")
+        var n1  = Number(PrimeiraNota.value)
+        var n2  = Number(SegundaNota.value) 
+        var n3  = Number(TerceiraNota.value) 
+        var n4  = Number(QuartaNota.value) 
+        var n5  = Number(QuintaNota.value) 
+        var n6  = Number(SextaNota.value)
+        var NOTA= (n1 + n2 + n3 + n4 + n5 + n6) / 6
+
+        //MAIOR
+        maior = n1
+        
+        if (n2 > maior) {
+            maior = n2
+        }
+
+        if (n3 > maior) {
+            maior = n3
+        } 
+        if (n4 > maior) {
+            maior = n4
+        }
+
+        if (n5 > maior) {
+            maior = n5
+        } 
+        if (n6 > maior) {
+            maior = n6
+        } 
+
+        //MENOR
+        var menor = n1
+
+
+        if (n2 < menor) {
+            menor = n2
+        }
+
+        if (n3 < menor) {
+            menor = n3
+        } 
+        if (n4 < menor) {
+            menor = n4
+        }
+
+        if (n5 < menor) {
+            menor = n5
+        } 
+        if (n6 < menor) {
+            menor = n6
+        }
+
+        // Dizendo a situação
+
+        // APROVADO OU REPROVADO
+        var situacao1 = 0
+        if (n1 >= 7) {
+            situacao1 = "Aprovado"
+        }
+        if (n1 <= 5){
+            situacao1="Reprovado"
+        }
+        if ((n1 > 5) && (n1 < 7)) {
+            situacao1 = "Em Exame"
+        }
+//////////////////////////////////////////////////////////////////////////////// SEGUNDO ALUNO
+        var situacao2 = 0
+        if (n2 >= 7) {
+            situacao2 = "Aprovado"
+        }
+        if (n2 <= 5){
+            situacao2="Reprovado"
+        }
+        if ((n2 > 5) && (n2 < 7)) {
+            situacao2 = "Em Exame"
+        }
+///////////////////////////////////////////////////////////////////////////// TERCEIRO ALUNO
+        var situacao3 = 0
+        if (n3 >= 7) {
+            situacao3 = "Aprovado"
+        }
+        if (n3 <= 5){
+            situacao3="Reprovado"
+        }
+        if ((n3 > 5) && (n3 < 7)) {
+            situacao3 = "Em Exame"
+        }
+//////////////////////////////////////////////////////////////////////////////// QUARTO ALUNO
+        var situacao4 = 0
+        if (n4 >= 7) {
+            situacao4 = "Aprovado"
+        }
+        if (n4 <= 5){
+            situacao4="Reprovado"
+        }
+        if ((n4 > 5) && (n4 < 7)) {
+            situacao4 = "Em Exame"
+        }
+/////////////////////////////////////////////////////////////////////////////// QUINTO ALUNO
+        var situacao5 = 0
+        if (n5 >= 7) {
+            situacao5 = "Aprovado"
+        }
+        if (n5 <= 5){
+            situacao5="Reprovado"
+        }
+        if ((n5 > 5) && (n5 < 7)) {
+            situacao5 = "Em Exame"
+        }
+//////////////////////////////////////////////////////////////////////////////// SEXTO ALUNO
+        var situacao6 = 0
+        if (n6 >= 7) {
+            situacao6 = "Aprovado"
+        }
+        if (n6 <= 5){
+            situacao6="Reprovado"
+        }
+        if ((n6 > 5) && (n6 < 7)) {
+            situacao6 = "Em Exame"
+        }
+
+        Situacao.innerHTML=
+        "O primeiro aluno está: " + situacao1 + "<br>" +
+        " O segundo aluno está: " + situacao2 + "<br>" + 
+        " O terceiro aluno está:" + situacao3 + "<br>" + 
+        " O quarto aluno está: "  + situacao4 + "<br>" + 
+        " O quinto aluno está: "  + situacao5 + "<br>" + 
+        " O sexto aluno está: "   + situacao6
+        
+        MaiorNota.innerHTML = "A <strong>Maior</strong> nota digitada foi: " + maior
+        MenorNota.innerHTML = "A <strong>Menor</strong> nota digitada foi: " + menor
+        res.innerHTML = "As notas digitadas foram: " + n1 +
+         ", " + n2 + ", " + n3 + ", " + n4+ ", " + n5 + ", " + n6 
+         Media.innerHTML = "A <strong>Média</strong> das notas é igual a " + NOTA
+    }
+</script>
+</body>
+</html>

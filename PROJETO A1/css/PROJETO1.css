@@ -1,0 +1,84 @@
+div#textos {
+    line-height: 33px
+}
+body{
+    font: normal 14pt Arial;
+    color: rgb(0, 0, 0);
+    padding-left: 12px;
+ 
+  background-color: rgb(247, 236, 177);
+}
+
+div.inputs {
+    font-size: medium;
+}
+input#Nota1{
+    font: normal 12pt Arial;
+    width: 230px;
+    max-width: 100%;
+    border-width: 4px;
+    border-style: double;
+    border-color: rgb(0, 0, 0);
+}
+input#Nota2{
+    
+    font: normal 12pt Arial;
+    width: 233px;
+    max-width: 100%;
+    border-width: 4px;
+    border-style: double;
+    border-color: rgb(0, 0, 0);       }
+input#Nota3{
+    font: normal 12pt Arial;
+    width: 227px;
+    max-width: 100%;
+    border-width: medium;
+    border-style: double;
+    border-color: rgb(0, 0, 0);
+}
+input#Nota4{
+    font: normal 12pt Arial;
+    width: 216px;
+    max-width: 100%;
+    border-width: 4px;
+    border-style: double;
+    border-color: rgb(0, 0, 0);
+}
+input#Nota5{
+    font: normal 12pt Arial;
+    width: 214px;
+    max-width: 100%;
+    border-width: 4px;
+    border-style: double;
+    border-color: rgb(0, 0, 0);
+}
+input#Nota6{
+    font: normal 12pt Arial;
+    width: 209px;
+    max-width: 100%;
+    border-width: 4px;
+    border-style: double;
+    border-color: rgb(0, 0, 0);
+}
+input {
+    width: 80px;
+    border-width: 2px;
+    border-style: double;
+    margin-left: 39ox;
+    
+}
+div#res{
+    margin-top: 14px;
+}
+div#Media {
+    margin-top:  15px;
+}
+div#MaiorNota {
+    margin-top:  15px;
+}
+div#MenorNota {
+    margin-top:  15px;
+}
+div#Situacao {
+    margin-top: 15px;
+}
