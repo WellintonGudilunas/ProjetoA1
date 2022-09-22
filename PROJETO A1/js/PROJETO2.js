@@ -72,11 +72,11 @@
             }
             } else if (numeroSorteado > chute.value){ 
                 tentativas++
-                txttentativa.innerHTML = "Tentativa: " + tentativas;
+                tentativatxt.innerHTML = "Tentativa: " + tentativas;
                 resultado.innerHTML = 'Você Errou e o numero sorteado é MAIOR que ' + chute.value
             } else if (numeroSorteado < chute.value) {
                 tentativas++
-                txttentativa.innerHTML = "Tentativa: " + tentativas;
+                tentativatxt.innerHTML = "Tentativa: " + tentativas;
                 resultado.innerHTML = `Você errou e o número sorteado é MENOR que ${chute.value}`
             }
         }
