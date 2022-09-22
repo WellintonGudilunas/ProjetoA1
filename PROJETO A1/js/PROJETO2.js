@@ -41,7 +41,7 @@
         if (numeroSorteado == chute.value) {
         tentativas++
         resultado.innerHTML = 'Parabéns, você Acertou na sua '
-        txttentativa.innerHTML = tentativas +"° tentativa"
+        tentativatxt.innerHTML = tentativas +"° tentativa"
         btverifica.innerHTML = "Tentar Novamente?"
         btverifica.removeEventListener("click", verifica);
         btverifica.addEventListener("click", reiniciar);;
