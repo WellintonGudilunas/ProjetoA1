@@ -18,7 +18,7 @@ function NOTAS () {
 
     var notas = [n1, n2, n3, n4, n5, n6]
 
-    maiorValor = 0
+    var maiorValor = 0
 
     for (var indice = 0; indice < notas.length; indice++) {
         if (maiorValor < notas[indice]){

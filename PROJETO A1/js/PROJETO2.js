@@ -71,7 +71,7 @@
                 
             }
             } else if (numeroSorteado > chute.value){ 
-                tentativas++ + 1
+                tentativas++
                 txttentativa.innerHTML = "Tentativa: " + tentativas;
                 resultado.innerHTML = 'Você Errou e o numero sorteado é MAIOR que ' + chute.value
             } else if (numeroSorteado < chute.value) {
