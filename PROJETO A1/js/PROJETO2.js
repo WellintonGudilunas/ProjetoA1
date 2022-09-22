@@ -27,7 +27,7 @@
         btverifica.addEventListener("click", verifica);
         btverifica.disabled = false;
         resultado.innerHTML = " "
-        txttentativa.innerHTML = " "
+        tentativatxt.innerHTML = " "
         txtclassificacao.innerHTML = " "
         chute.value = ""
         gerar();
