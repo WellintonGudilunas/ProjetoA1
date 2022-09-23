@@ -27,7 +27,7 @@ function NOTAS () {
     }
 
     //MENOR NOTA
-    var menorValor = 0
+    var menorValor = 1000
 
     for (var indice = 0; indice < notas.length; indice++) {
     if (menorValor > notas[indice]){
