@@ -1,2 +1,2 @@
 # ProjetoA1
- Projeto utilizado na aula de Algoritmos
+ Projeto desenvolvido utilizando HTML5, CSS3 e JavaScript na aula de Algoritmos
