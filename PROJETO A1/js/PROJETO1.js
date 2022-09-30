@@ -43,7 +43,7 @@ function verificaSituacao (nota) {
         situacao = "<strong>Reprovado</strong>"
     }else {
         situacao = "<strong>Em Exame</strong>"
-    }
+    } 
     return situacao
 }
 
